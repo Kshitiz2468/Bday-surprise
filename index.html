@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+  />
+
+  <title>Happy Birthday 🎉</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+
+  <!-- ✨ FROM TAG -->
+  <div id="fromTag">
+    ✨ From Kshitiz ✨
+  </div>
+
+  <!-- 🔐 LOCK SCREEN -->
+  <div id="lockScreen">
+
+    <h2 class="text-2xl mb-2">
+      Enter Special Name 💖
+    </h2>
+
+    <div class="password-box">
+
+      <input
+        id="nameInput"
+        type="password"
+        placeholder="Enter name..."
+        oninput="updatePasswordPreview()"
+      >
+
+      <div id="passwordPreview"></div>
+
+    </div>
+
+    <button
+      onclick="checkName()"
+      style="margin-top:15px;padding:10px 20px;background:#9d4edd;border-radius:14px;"
+    >
+      Unlock 🎁
+    </button>
+
+    <p
+      id="errorMsg"
+      style="color:red;display:none;margin-top:10px;"
+    >
+      Wrong name ❌
+    </p>
+
+  </div>
+
+  <!-- 🌌 Background Elements -->
+  <div class="galaxy"></div>
+  <div class="planet"></div>
+  <div class="moon"></div>
+
+  <!-- 🎈 Balloons -->
+  <div class="balloon" style="left:10%;background:#9d4edd;animation-duration:13s;"></div>
+  <div class="balloon" style="left:25%;background:#f15ee7;animation-duration:15s;"></div>
+  <div class="balloon" style="left:40%;background:#6bcBef;animation-duration:12s;"></div>
+  <div class="balloon" style="left:60%;background:#ffd93d;animation-duration:16s;"></div>
+  <div class="balloon" style="left:80%;background:#fbf9f9;animation-duration:14s;"></div>
+  <div class="balloon" style="left:35%;background:#37905c;animation-duration:10s;"></div>
+  <div class="balloon" style="left:55%;background:#ed4f4f;animation-duration:11s;"></div>
+
+  <!-- 🌟 Main Card -->
+  <div class="glass-card p-8 rounded-2xl max-w-md w-full text-center">
+
+    <!-- ✨ MAJESTIC GLASS IMAGE CIRCLE -->
+    <div class="majestic-circle">
+
+      <img
+        src="Image/katya.jpeg"
+        alt="Image"
+      >
+
+      <!-- ✨ Sparkles -->
+      <span class="spark sparkle1"></span>
+      <span class="spark sparkle2"></span>
+      <span class="spark sparkle3"></span>
+
+    </div>
+
+    <!-- 🎂 Birthday Heading -->
+    <h1 class="text-4xl mb-4">
+      🎂 Happy Birthday 🎂
+    </h1>
+
+    <!-- ✨ Name Display -->
+    <div id="nameDisplay" class="name-glow"></div>
+
+    <!-- 🌙 Message -->
+    <p class="text-gray-200 mb-6">
+      I wish your smile defeats every sadness, your dreams reach the skies,
+      and your heart always stays beautiful, magical, rare, and unforgettable
+      like the brightest moonlight ✨
+    </p>
+
+    <!-- 🎀 Surprise Button -->
+    <button
+      onclick="celebrate()"
+      class="px-6 py-3 bg-purple-600 rounded-xl"
+    >
+      Tap for Surprise 🎀
+    </button>
+
+    <!-- 🌌 POPUP -->
+    <div id="dreamPopup" class="hidden">
+
+      <div id="popupStars"></div>
+
+      <div class="special-text">
+
+        ✨ 𝚃𝚞𝚖𝚑𝚊𝚛𝚒 𝚜𝚖𝚒𝚕𝚎 𝚔𝚒 𝚜𝚘𝚏𝚝𝚗𝚎𝚜𝚜, 𝚝𝚞𝚖𝚑𝚊𝚛𝚎 𝚗𝚊𝚝𝚞𝚛𝚎 𝚔𝚒 𝚙𝚞𝚛𝚒𝚝𝚢, 
+        𝚊𝚞𝚛 𝚝𝚞𝚖𝚑𝚊𝚛𝚎 𝚑𝚎𝚊𝚛𝚝 𝚔𝚒 𝚠𝚊𝚛𝚖𝚝𝚑 𝚢𝚎 𝚜𝚊𝚋 𝚋𝚊𝚝𝚊𝚝𝚊 𝚑𝚊𝚒
+        𝙺𝚒 𝚊𝚞𝚗𝚝𝚢 𝚊𝚞𝚛 𝚞𝚗𝚌𝚕𝚎 𝚗𝚎 𝚎𝚔 𝚋𝚊𝚑𝚞𝚝 𝚑𝚒 𝚙𝚛𝚎𝚌𝚒𝚘𝚞𝚜 𝚊𝚞𝚛 𝚋𝚎𝚊𝚞𝚝𝚒𝚏𝚞𝚕 
+        𝙿𝚛𝚒𝚗𝚌𝚎𝚜𝚜 𝚜𝚘𝚞𝚕 𝚌𝚛𝚎𝚊𝚝𝚎 𝚔𝚒 𝚑𝚊𝚒 🌙
+
+        <br><br>
+
+        💫𝙳𝚒𝚗 𝚔𝚒 𝚍𝚑𝚘𝚘𝚙 𝚊𝚋 𝚊𝚞𝚛 𝚋𝚑𝚒 𝚜𝚞𝚋𝚕𝚒𝚖𝚎 𝚕𝚊𝚐𝚝𝚒 𝚑𝚊𝚒,
+        𝚊𝚞𝚛 𝚛𝚊𝚊𝚝 𝚔𝚊 𝚌𝚑𝚊𝚗𝚍 𝚝𝚑𝚘𝚍𝚊 𝚊𝚞𝚛 𝚊𝚕𝚕𝚞𝚛𝚒𝚗𝚐...
+        𝚔𝚢𝚞𝚗𝚔𝚒 𝚝𝚞𝚖𝚑𝚊𝚛𝚒 𝚎𝚡𝚚𝚞𝚒𝚜𝚒𝚝𝚎 𝚖𝚊𝚞𝚓𝚘𝚘𝚍𝚐𝚒 𝚜𝚎 𝚢𝚎 𝚍𝚞𝚗𝚒𝚢𝚊 𝚊𝚞𝚛 𝚋𝚑𝚒
+        𝚑𝚊𝚜𝚎𝚎𝚗 𝚑𝚘 𝚐𝚊𝚢𝚒 𝚑𝚊𝚒 🌙✨
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Confetti Library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <!-- External JS -->
+  <script src="script.js"></script>
+
+</body>
+</html>

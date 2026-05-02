@@ -1,4 +1,4 @@
-const correctName = "Katyayani";
+const correctName = "Katyayani..";
 
 /* ⭐ Password Preview */
 function updatePasswordPreview(){

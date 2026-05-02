@@ -1,4 +1,5 @@
-const correctName = "Katyayani..";
+const passwordName = "Unicorn";
+const displayName ="Katyayani"
 
 /* ⭐ Password Preview */
 function updatePasswordPreview(){
@@ -20,13 +21,13 @@ function checkName(){
 
   if(
     input.toLowerCase() ===
-    correctName.toLowerCase()
+    passwordName.toLowerCase()
   ){
 
     document.getElementById("lockScreen")
     .style.display = "none";
 
-    showName(correctName);
+    showName(displayName);
 
   } else {
 

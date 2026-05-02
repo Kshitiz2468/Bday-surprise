@@ -1,5 +1,5 @@
 const passwordName = "Unicorn";
-const displayName ="Katyayani";
+const displayName = "Katyayani";
 
 /* ⭐ Password Preview */
 function updatePasswordPreview(){

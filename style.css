@@ -435,27 +435,42 @@ body::before{
 /* 🎂 HAPPY BIRTHDAY GLOW */
 .birthday-glow{
 
-  font-size:clamp(32px,6vw,52px);
+  font-size:clamp(24px,4vw,36px);
 
-  font-weight:800;
+  font-weight:700;
 
-  margin-bottom:18px;
+  margin-bottom:14px;
 
-  letter-spacing:2px;
+  letter-spacing:1px;
 
   color:#ffffff;
 
   text-align:center;
 
+  white-space:nowrap;
+
   animation:
   birthdayPulse 2.5s ease-in-out infinite alternate;
 
   text-shadow:
-    0 0 8px #ffffff,
-    0 0 18px #ff4d6d,
-    0 0 35px #ff4d6d,
-    0 0 55px #9d4edd,
-    0 0 80px #6bcBef;
+    0 0 6px #ffffff,
+    0 0 14px #ff4d6d,
+    0 0 24px #9d4edd,
+    0 0 40px #6bcBef;
+}
+
+/* ✨ Glow Animation */
+@keyframes birthdayPulse{
+
+  from{
+    transform:scale(1);
+    filter:brightness(1);
+  }
+
+  to{
+    transform:scale(1.02);
+    filter:brightness(1.08);
+  }
 }
 
 /* ✨ Glow Animation */
